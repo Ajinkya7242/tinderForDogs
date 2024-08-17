@@ -2,6 +2,11 @@
 
 Tinder for Dogs is an Android application where users can swipe right or left on images of dogs, similar to the Tinder app. Users can like dogs, view their favorite dogs, and store data locally using a Room database.
 
+# App Demo
+
+https://github.com/user-attachments/assets/bbaa5a56-fb78-45d2-adc0-34cbd2e89157
+
+
 ## Table of Contents
 
 - [Features](#features)
