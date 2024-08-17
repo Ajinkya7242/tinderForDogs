@@ -12,10 +12,16 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.tinderfordogs.MainActivity
 import com.example.tinderfordogs.R
+import com.google.firebase.auth.FirebaseAuth
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
+import javax.inject.Inject
 
-class SplashActivity : AppCompatActivity() {
+@AndroidEntryPoint
+class SplashActivity  : AppCompatActivity() {
+    @Inject
+    lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -25,7 +31,6 @@ class SplashActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
         startNewScreen()
     }
 
@@ -33,7 +38,12 @@ class SplashActivity : AppCompatActivity() {
 
     private fun startNewScreen() {
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            val currentUser = auth.currentUser
+            if (currentUser != null) {
+                startActivity(Intent(this, MainActivity::class.java))
+            } else {
+                startActivity(Intent(this, LoginOptionsActivity::class.java))
+            }
             finish()
         }, 1500)
     }
