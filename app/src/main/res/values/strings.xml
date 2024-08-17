@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Tinder for Dogs</string>
+    <string name="take_care_of_your_pet">Take Care Of\nYour Pet</string>
+    <string name="login_with_google">LOGIN WITH GOOGLE</string>
+    <string name="don_t_have_an_account">Don’t have an account?</string>
+    <string name="find_your_perfect_npup_match_today">Meet Your\nNew Best Friend!</string>
+    <string name="login">LOGIN</string>
+    <string name="enter_email_address">Enter Email Address</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="create_user">Create User</string>
+</resources>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/top_gradient"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/dlHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="610dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glHorizontal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="209dp" />
+
+
+
+
+
+        <com.yuyakaido.android.cardstackview.CardStackView
+            android:id="@+id/card_stack_view"
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="@dimen/_340sdp"
+            android:foregroundGravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:elevation="@dimen/_20sdp"/>
+
+
+
+    <TextView
+        android:id="@+id/tvRejected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:background="@drawable/bg_acceptedtext"
+        android:backgroundTint="@color/red"
+        android:elevation="@dimen/_12sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:text="Rejected"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/glHorizontal2"
+        app:layout_constraintStart_toStartOf="@id/card_stack_view"/>
+
+    <TextView
+        android:id="@+id/tvAccepted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:background="@drawable/bg_acceptedtext"
+        android:backgroundTint="@color/green"
+        android:elevation="@dimen/_12sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:text="Accepted"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/glHorizontal2"
+        app:layout_constraintEnd_toEndOf="@id/card_stack_view"
+
+        />
+
+
+    <Button
+        android:id="@+id/ivLike"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Saved Images"
+        android:backgroundTint="@color/red"
+        android:elevation="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/card_stack_view"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+
+    <ProgressBar
+        android:id="@+id/pbMain"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:elevation="@dimen/_10sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bottom_gradient"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1023642147818",
+    "project_id": "pettinder-d7d70",
+    "storage_bucket": "pettinder-d7d70.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023642147818:android:222550917236d4fe427093",
+        "android_client_info": {
+          "package_name": "com.example.tinderfordogs"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX1LDD1jip5uxJ4ZQb-wbeXotdyYP_SE0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
