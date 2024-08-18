@@ -33,7 +33,7 @@ class MainActivityVIewModel@Inject constructor(
     fun fetchImages() {
         _loading.value=true
         try{
-            for(i in 0..10){
+            for(i in 0..20){
                 viewModelScope.launch {
                     try {
                         val response = repository.getAllDogs()
