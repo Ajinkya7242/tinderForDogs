@@ -32,7 +32,7 @@ class MainActivity  : AppCompatActivity() {
     lateinit var manager:CardStackLayoutManager
     private val viewModel: MainActivityVIewModel by viewModels()
 
-    lateinit var listOfImges:List<TinderCardModel>
+    lateinit var listOfImges:MutableList<TinderCardModel>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,11 +41,6 @@ class MainActivity  : AppCompatActivity() {
 
         binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-//            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-//            insets
-//        }
 
         binding.ivLike.setOnClickListener{
             startActivity(Intent(this,FavouriteDogsActivity::class.java))
@@ -102,6 +97,7 @@ class MainActivity  : AppCompatActivity() {
                 if(manager.topPosition==listOfImges.size){
                     Toast.makeText(this@MainActivity, "All Cards Swiped", Toast.LENGTH_SHORT).show()
                     viewModel.fetchImages()
+                    listOfImges.clear()
                 }
             }
 
